@@ -17,51 +17,71 @@
     <title>Vite App</title>
   </head>
   <body>
-    <section class="header">
-      <div class="header__image">
-        <img
-          src="Images/illustration-sign-up-mobile.svg"
-          alt="illustration-sign-up-mobile"
-        />
-      </div>
-    </section>
-    <main class="main">
-      <section class="main__content">
-        <h1 class="main__content-heading">Stay updated!</h1>
-        <p class="main__content-description">
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        <div class="main__content-highlight">
-          <img src="/Images/icon-list.svg" alt="" />
-          <p class="main__content-highlight-text">
-            Product discovery and building what matters
-          </p>
-        </div>
-        <div class="main__content-highlight">
-          <img src="/Images/icon-list.svg" alt="" />
-          <p class="main__content-highlight-text">
-            Measuring to ensure updates are a success
-          </p>
-        </div>
-        <div class="main__content-highlight">
-          <img src="/Images/icon-list.svg" alt="" />
-          <p class="main__content-highlight-text">And much more!</p>
-        </div>
-      </section>
-      <form class="form">
-        <div class="form__group">
-          <label for="email" class="form__group-label">Email address</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="form__group-input"
-            placeholder="email@company.com"
+    <!-- SIGN UP PAGE -->
+    <section class="sign-up-page">
+      <section class="header">
+        <div class="header__image">
+          <img
+            src="Images/illustration-sign-up-mobile.svg"
+            alt="illustration-sign-up-mobile"
           />
         </div>
-        <button class="btn">Subscribe to monthly newsletter</button>
-      </form>
-    </main>
+      </section>
+      <!-- MAIN SECTION -->
+      <main class="main">
+        <section class="main__content">
+          <h1 class="main__content-heading">Stay updated!</h1>
+          <p class="main__content-description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <div class="main__content-highlight">
+            <img src="/Images/icon-list.svg" alt="" />
+            <p class="main__content-highlight-text">
+              Product discovery and building what matters
+            </p>
+          </div>
+          <div class="main__content-highlight">
+            <img src="/Images/icon-list.svg" alt="" />
+            <p class="main__content-highlight-text">
+              Measuring to ensure updates are a success
+            </p>
+          </div>
+          <div class="main__content-highlight">
+            <img src="/Images/icon-list.svg" alt="" />
+            <p class="main__content-highlight-text">And much more!</p>
+          </div>
+        </section>
+        <!-- FORM SECTION -->
+        <form class="form">
+          <div class="form__group">
+            <label for="email" class="form__group-label">Email address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form__group-input"
+              placeholder="email@company.com"
+            />
+          </div>
+          <button class="btn">Subscribe to monthly newsletter</button>
+        </form>
+        <!-- THANK YOU PAGE -->
+      </main>
+    </section>
+    <section class="response hidden">
+      <div class="response__content">
+        <img src="Images/icon-list.svg" alt="" />
+        <h2>Thanks for subscribing!</h2>
+        <p>
+          A confirmation email has been sent to
+          <span class="user__email">ash@loremcompany.com</span>. Please open it
+          and click the button inside to confirm your subscription.
+        </p>
+      </div>
+
+      <button class="btn">Dismiss message</button>
+    </section>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
