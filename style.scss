@@ -1,0 +1,139 @@
+/*CSS Variables */
+
+$color-900: hsl(4, 100%, 67%);
+$color-800: hsl(234, 29%, 20%);
+$color-700: hsl(235, 18%, 26%);
+$color-600: hsl(231, 7%, 60%);
+$color-500: hsl(0, 0, 100%);
+$font-family: "Roboto", sans-serif;
+$fw-400: 400;
+$fw-700: 700;
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+html {
+  font-size: 62.5%; // 10px = 1rem
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
+  font-family: $font-family;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+::placeholder {
+  padding: 1rem;
+}
+
+// Utulity Class
+
+.btn {
+  background-color: $color-800;
+  color: $color-500;
+  border: 0;
+  padding: 1.5rem;
+  font-weight: $fw-700;
+  border-radius: 6px;
+}
+
+/* Header Styles */
+
+/* Main Styles */
+
+.main {
+  padding: 2.5rem;
+  &__content {
+    &-heading {
+      font-size: 4rem;
+      color: $color-800;
+      font-weight: $fw-700;
+    }
+    &-description {
+      padding: 2rem 0;
+    }
+    &-highlight {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      img {
+        align-self: flex-start;
+      }
+      &-text {
+        font-weight: $fw-400;
+        color: $color-800;
+      }
+    }
+  }
+}
+
+/* Form Styles */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding-top: 3rem;
+    &-label {
+      font-size: 1.4rem;
+      font-weight: $fw-700;
+    }
+    &-input {
+      padding: 1.3rem;
+      border: 1px solid $color-600;
+      border-radius: 10px;
+    }
+  }
+}
