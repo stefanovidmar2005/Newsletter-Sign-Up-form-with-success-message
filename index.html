@@ -54,7 +54,11 @@
         <!-- FORM SECTION -->
         <form class="form">
           <div class="form__group">
-            <label for="email" class="form__group-label">Email address</label>
+            <div class="form__group-labels">
+              <label for="email" class="form__group-label">Email address</label>
+              <span class="error-message hidden">Valid email required</span>
+            </div>
+
             <input
               type="email"
               name="email"

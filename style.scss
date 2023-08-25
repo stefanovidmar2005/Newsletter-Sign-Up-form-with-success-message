@@ -73,6 +73,7 @@ h6 {
 
 ::placeholder {
   padding: 1rem;
+  // color: $color-900;
 }
 
 // Utulity Class
@@ -85,8 +86,14 @@ h6 {
   font-weight: $fw-700;
   border-radius: 6px;
 }
-.error-outline {
-  border: 1px solid red !important;
+.error-input {
+  border: 1px solid $color-900 !important;
+  background-color: rgba(255, 98, 87, 0.3);
+}
+.error-message {
+  color: $color-900;
+  font-size: 1.3rem;
+  font-weight: $fw-700;
 }
 
 .hidden {
@@ -141,8 +148,12 @@ h6 {
     flex-direction: column;
     gap: 0.7rem;
     padding-top: 3rem;
+    &-labels {
+      display: flex;
+      justify-content: space-between;
+    }
     &-label {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: $fw-700;
     }
     &-input {
