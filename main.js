@@ -8,7 +8,7 @@ const responseSection = document.querySelector(".response");
 const singUpBtn = document.querySelector(".btn");
 const userEmailInput = document.querySelector(".form__group-input");
 const userEmailSpanText = document.querySelector(".user__email");
-console.log(userEmailInput);
+
 // Helper function that checkes whether email is valid or not!
 const isEmailValid = (email) => {};
 
