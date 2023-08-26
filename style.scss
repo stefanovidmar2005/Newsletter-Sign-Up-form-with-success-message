@@ -5,6 +5,7 @@ $color-800: hsl(234, 29%, 20%);
 $color-700: hsl(235, 18%, 26%);
 $color-600: hsl(231, 7%, 60%);
 $color-500: hsl(0, 0, 100%);
+$rose: hsl(350, 100%, 67%);
 $font-family: "Roboto", sans-serif;
 $fw-400: 400;
 $fw-700: 700;
@@ -91,6 +92,12 @@ h6 {
   padding: 1.5rem;
   font-weight: $fw-700;
   border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(to right, transparent, transparent) $color-800;
+  cursor: pointer;
+  &:hover {
+    background: $color-900;
+  }
 }
 .error-input {
   border: 1px solid $color-900 !important;
@@ -216,11 +223,23 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  @include for-desktop() {
+    max-width: 45rem;
+    background-color: #fff;
+    height: auto;
+    border-radius: 35px;
+    padding: 4rem;
+    padding-bottom: 6rem;
+  }
   &__content {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     padding-top: 13rem;
+    @include for-desktop() {
+      padding-top: 0;
+      margin-bottom: 3rem;
+    }
     img {
       width: 6.5rem;
     }
@@ -228,6 +247,10 @@ body {
       font-size: 4rem;
       line-height: 1;
       color: $color-800;
+      font-weight: $fw-700;
+      @include for-desktop() {
+        font-size: 5rem;
+      }
     }
     .user__email {
       color: $color-800;
