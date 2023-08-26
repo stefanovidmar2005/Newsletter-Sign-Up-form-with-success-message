@@ -28,14 +28,15 @@ const nextPage = (userEmail) => {
   }
 };
 
-singUpBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  nextPage(userEmailInput.value);
-});
+// this is to remove the error messages/ red outlines when user focus on email input again to indicate that he can type something new
 userEmailInput.addEventListener("focus", () => {
-  console.log("focus");
   if (userEmailInput.classList.contains("error-input"))
     userEmailInput.classList.remove("error-input");
   if (!errorMessage.classList.contains("hidden"))
     errorMessage.classList.add("hidden");
+});
+// on button click we call the function nextPage that takes care of the validation part of the email
+singUpBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  nextPage(userEmailInput.value);
 });

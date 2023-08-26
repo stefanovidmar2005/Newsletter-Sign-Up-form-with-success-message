@@ -10,6 +10,12 @@ $fw-400: 400;
 $fw-700: 700;
 $container-padding: 2.5rem;
 
+@mixin for-desktop {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -99,13 +105,43 @@ h6 {
 .hidden {
   display: none !important;
 }
+body {
+  @include for-desktop() {
+    background-color: $color-800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+.sign-up-page {
+  @include for-desktop() {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 35px;
+    align-items: center;
+    padding: 2rem;
+    max-width: 90rem;
+  }
+}
 
 /* Header Styles */
 
-.header__image {
+.header__image-mobile {
   img {
+    @include for-desktop() {
+      display: none;
+    }
     width: 100%;
     height: auto;
+  }
+}
+.header__image-desktop {
+  display: none;
+  @include for-desktop() {
+    display: block;
   }
 }
 
@@ -113,14 +149,23 @@ h6 {
 
 .main {
   padding: $container-padding;
+  @include for-desktop() {
+    margin: 2rem;
+  }
   &__content {
     &-heading {
       font-size: 4rem;
       color: $color-800;
       font-weight: $fw-700;
+      @include for-desktop() {
+        font-size: 5.5rem;
+      }
     }
     &-description {
       padding: 2rem 0;
+      @include for-desktop() {
+        // font-size: 1.7rem;
+      }
     }
     &-highlight {
       display: flex;
